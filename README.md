@@ -1,5 +1,5 @@
 # API приложения YaMDB
-[![Yamdb workflow](https://github.com/luaroncrew/yamdb_final/actions/workflows/yamdb.yaml/badge.svg)]
+![Yamdb workflow](https://github.com/luaroncrew/yamdb_final/actions/workflows/yamdb.yaml/badge.svg)
 ## Инструкция по развертыванию приложения на своей машине
 
 1. Устанавливаем Docker
