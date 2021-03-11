@@ -1,5 +1,6 @@
 # API приложения YaMDB
 ![Yamdb workflow](https://github.com/luaroncrew/yamdb_final/actions/workflows/yamdb.yaml/badge.svg)
+проект можно посмотреть по адресу capybara.ml
 ## Инструкция по развертыванию приложения на своей машине
 
 1. Устанавливаем Docker
