@@ -1,28 +1,15 @@
 # API приложения YaMDB
+https://github.com/luaroncrew/yamdb_final/actions/workflows/yamdb.yaml/badge.svg
+## Инструкция по развертыванию приложения на своей машине
 
-## :wrench: Стек
-- каркас: django, django-restframework, simple jwt 
-- деплой: docker, wsgi (gunicorn), nginx 
+1. Устанавливаем Docker
+2. Клонируем репозиторий **`git clone https://github.com/luaroncrew/infra_sp2/`**
+4. В папке, куда склонировали репозиторий выполняем **`docker-compose up`**
+5. Заходим в проект с другого терминала **`docker exec -it infra_sp2_db_1 sh`** 
+6. Создаем суперпользователя для доступа в админку **`python manage.py createsuperuser`**
+7. Можно загрузить тестовые данные из файла fixtures **`python manage.py loaddata fixtures.json`**
 
-## :rocket: Инструкция по развертыванию приложения на своей машине
-
-1. Убедиться, что на локальной машине установлен и запущен Docker.
-2. Клонировать репозиторий в любое место на машине **`git clone https://github.com/stasyao/infra_sp2/`**
-4. В скопированной папке зайти в терминал, собрать и запустить докер-контейнер **`docker-compose up -d`**
-5. Сделать первоначальные миграции и собрать статику **`docker-compose exec web sh ./entrypoint.sh`**
-6. Создать суперпользователя для доступа в админку **`docker-compose exec web python manage.py createsuperuser`**. Потребуется ввести email и задать пароль.
-7. Чтобы сразу ознакомиться с возможностями приложения, можно загрузить готовый набор тестовых данных для всех моделей **`docker-compose exec web python manage.py loaddata fixtures.json`**
-
-Чек-лист команд:
-- **`git clone https://github.com/stasyao/infra_sp2/`**
-- **`cd infra_sp2/`**
-- **`docker-compose up -d`**
-- **`docker-compose exec web sh ./entrypoint.sh`**
-- **`docker-compose exec web python manage.py createsuperuser`**
-- **`docker-compose exec web python manage.py loaddata fixtures.json`**
-
-Приложение будет работать с локального сервера `http://localhost/`, все эндпоинты приведены ниже, в разделе 3 описания.
-Например, список всех книг, фильмов и музыки доступен по эндпоинту http://localhost/api/v1/titles/.
+Приложение будет работать с локального сервера `http://localhost/`
 
 ## Описание приложения
 
@@ -48,7 +35,7 @@
 
 ## 3. Эндпоинты АPI
 
-Все эндпоинты начинаются с `http://localhost/api/v1/`
+Все эндпоинты начинаются с `http://localhost:8000/api/v1/`
 
 | Эндпоинт | Метод запроса | Результат|
 |:----:|:----:|:----------:|
