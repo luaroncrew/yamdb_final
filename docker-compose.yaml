@@ -9,7 +9,7 @@ services:
     env_file:
       - ./.env
   web:
-    image: luaroncrew/yamdb_final:latest
+    image: luaroncrew/yamdb_final:v1
     restart: always
     volumes:
       - ./staticfiles/:/code/staticfiles/
